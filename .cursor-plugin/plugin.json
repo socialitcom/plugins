@@ -2,7 +2,7 @@
   "name": "socialit",
   "displayName": "Socialit",
   "description": "Hosted Socialit MCP server with OAuth plus skills for publishing and scheduling posts, the social inbox, analytics, CRM automations, webhooks, and the Socialit API.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Socialit",
     "email": "support@socialit.com"

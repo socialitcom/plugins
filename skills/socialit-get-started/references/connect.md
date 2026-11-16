@@ -89,11 +89,21 @@ grok.com: open **Connectors**, choose **New Connector > Custom**, and enter `htt
 
 ## Other clients
 
-Any client that supports remote MCP servers over Streamable HTTP works the same way: give it `https://api.socialit.com/mcp` and sign in. Clients that only run local (stdio) servers can bridge with:
+Any client that supports remote MCP servers over Streamable HTTP works the same way: give it `https://api.socialit.com/mcp` and sign in. Clients that only start local (stdio) servers, such as Claude Desktop's config file, use the `@socialit/mcp` package with an API key (see "API key for headless clients" below for creating one). It bridges to the hosted server, so the tools are the same:
 
-```bash
-npx -y mcp-remote https://api.socialit.com/mcp
+```json
+{
+  "mcpServers": {
+    "socialit": {
+      "command": "npx",
+      "args": ["-y", "@socialit/mcp"],
+      "env": { "SOCIALIT_API_KEY": "sk_live_..." }
+    }
+  }
+}
 ```
+
+`SOCIALIT_TOOLSETS` (for example `posts,media,accounts`) and `SOCIALIT_READ_ONLY=true` in the same `env` narrow the tools. It needs Node.js 20 or later.
 
 ## API key for headless clients
 

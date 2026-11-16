@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "socialit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schedule and publish social media posts, answer DMs, comments and reviews, read analytics, and run CRM automations with Socialit.",
   "author": {
     "name": "Socialit",

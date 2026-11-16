@@ -1,6 +1,6 @@
 {
   "name": "socialit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Socialit for Grok: schedule posts, answer the inbox, read analytics, and automate social media through the hosted Socialit MCP server with OAuth.",
   "logo": "assets/logo.png",
   "author": {

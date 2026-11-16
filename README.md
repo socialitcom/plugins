@@ -72,7 +72,7 @@ On grok.com, open **Connectors > New Connector > Custom** and enter `https://api
 
 ### Other clients
 
-Any client that supports remote MCP servers over Streamable HTTP works the same way: give it `https://api.socialit.com/mcp` and sign in. Clients that only run local (stdio) servers can bridge with `npx -y mcp-remote https://api.socialit.com/mcp`.
+Any client that supports remote MCP servers over Streamable HTTP works the same way: give it `https://api.socialit.com/mcp` and sign in. Clients that only start local (stdio) servers, such as Claude Desktop's config file, use the [`@socialit/mcp`](https://www.npmjs.com/package/@socialit/mcp) package with a Socialit API key: the command `npx -y @socialit/mcp` with `SOCIALIT_API_KEY` in its environment. It bridges to the hosted server, so the tools are the same ([socialitcom/mcp](https://github.com/socialitcom/mcp)).
 
 ## Access and security
 
@@ -114,7 +114,6 @@ This repository is published from Socialit's main repository, and each release r
 | `.claude-plugin/`, `.mcp.json` | Claude Code, Claude directory, Grok |
 | `.grok-plugin/plugin.json` | Grok |
 | `.agents/plugins/marketplace.json` | Codex marketplace |
-| `server.json` | Official MCP Registry |
 
 ## Support
 
