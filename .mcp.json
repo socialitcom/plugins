@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "socialit": {
+      "type": "http",
+      "url": "https://api.socialit.com/mcp"
+    }
+  }
+}

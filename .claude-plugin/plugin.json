@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "socialit",
+  "displayName": "Socialit",
+  "version": "1.0.0",
+  "description": "Hosted Socialit MCP server with OAuth plus skills for publishing and scheduling posts, the social inbox, analytics, CRM automations, webhooks, and the Socialit API.",
+  "author": {
+    "name": "Socialit",
+    "email": "support@socialit.com",
+    "url": "https://socialit.com"
+  },
+  "homepage": "https://socialit.com/docs/mcp/",
+  "repository": "https://github.com/socialitcom/plugins",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://socialit.com/privacy/",
+  "keywords": ["socialit", "social-media", "scheduling", "publishing", "social-inbox", "analytics", "webhooks"]
+}

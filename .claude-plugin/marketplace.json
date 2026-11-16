@@ -1,0 +1,20 @@
+{
+  "name": "socialit",
+  "owner": {
+    "name": "Socialit",
+    "email": "support@socialit.com"
+  },
+  "metadata": {
+    "description": "Official Socialit plugin for Claude Code and Grok: hosted MCP server and social media skills."
+  },
+  "plugins": [
+    {
+      "name": "socialit",
+      "description": "Schedule posts, answer the inbox, read analytics, and automate social media with Socialit.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://socialit.com/docs/mcp/",
+      "tags": ["social-media", "mcp", "scheduling", "publishing", "social-inbox", "analytics"]
+    }
+  ]
+}

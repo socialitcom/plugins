@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.socialit/socialit",
+  "title": "Socialit",
+  "description": "Schedule social posts, answer DMs and comments, read analytics, run CRM automations and ads.",
+  "version": "1.0.0",
+  "websiteUrl": "https://socialit.com/docs/mcp/",
+  "repository": {
+    "url": "https://github.com/socialitcom/plugins",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://socialit.com/web-app-manifest-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.socialit.com/mcp"
+    }
+  ]
+}

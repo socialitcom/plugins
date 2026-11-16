@@ -1,0 +1,17 @@
+{
+  "name": "socialit",
+  "owner": {
+    "name": "Socialit",
+    "email": "support@socialit.com"
+  },
+  "metadata": {
+    "description": "Official Socialit plugin: hosted MCP server and social media skills."
+  },
+  "plugins": [
+    {
+      "name": "socialit",
+      "source": "./",
+      "description": "Schedule posts, answer the inbox, read analytics, and automate social media with Socialit."
+    }
+  ]
+}

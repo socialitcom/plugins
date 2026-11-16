@@ -1,0 +1,15 @@
+{
+  "name": "socialit",
+  "version": "1.0.0",
+  "description": "Socialit for Grok: schedule posts, answer the inbox, read analytics, and automate social media through the hosted Socialit MCP server with OAuth.",
+  "logo": "assets/logo.png",
+  "author": {
+    "name": "Socialit",
+    "email": "support@socialit.com",
+    "url": "https://socialit.com"
+  },
+  "homepage": "https://socialit.com/docs/mcp/",
+  "repository": "https://github.com/socialitcom/plugins",
+  "license": "MIT",
+  "keywords": ["socialit"]
+}

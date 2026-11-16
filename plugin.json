@@ -1,0 +1,104 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "socialit",
+  "version": "1.0.0",
+  "description": "Schedule and publish social media posts, answer DMs, comments and reviews, read analytics, and run CRM automations with Socialit.",
+  "author": {
+    "name": "Socialit",
+    "email": "support@socialit.com",
+    "url": "https://socialit.com"
+  },
+  "homepage": "https://socialit.com/docs/mcp/",
+  "repository": "https://github.com/socialitcom/plugins",
+  "license": "MIT",
+  "keywords": ["socialit", "social-media", "scheduling", "publishing", "social-inbox", "analytics", "webhooks"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Socialit",
+        "shortDescription": "Schedule posts, answer DMs",
+        "longDescription": "Socialit is API-first social media management for every network: Instagram, Facebook, LinkedIn, X, TikTok, YouTube, Threads, Bluesky, Pinterest, Reddit, Google Business Profile and more. This plugin lets ChatGPT and Codex work with your Socialit workspace: draft, schedule and publish posts to your connected accounts, fill your posting queues, upload media, and check why a post failed.\n\nYou can also answer direct messages, comments, reviews and mentions from one inbox, read post, account and inbox analytics, find the best time to post, manage contacts, broadcasts, sequences and workflows, and set up webhooks.\n\nSign in with your Socialit account and choose which workspaces to allow. Tools that publish, send messages or delete data are marked so ChatGPT and Codex ask you before running them. Codex users also get skills for integrating the Socialit API into their code.",
+        "developerName": "Socialit",
+        "category": "Productivity",
+        "capabilities": [
+          "Draft and schedule posts",
+          "Publish to every network",
+          "Answer DMs and comments",
+          "Read post and account analytics",
+          "Manage contacts and automations",
+          "Configure webhooks"
+        ],
+        "websiteURL": "https://socialit.com",
+        "supportURL": "https://socialit.com/contact/",
+        "privacyPolicyURL": "https://socialit.com/privacy/",
+        "termsOfServiceURL": "https://socialit.com/terms/",
+        "defaultPrompt": [
+          "Which of my Socialit accounts need to be reconnected?",
+          "What posts are scheduled for this week?",
+          "Draft a LinkedIn post about our launch, but don't schedule it."
+        ],
+        "brandColor": "#1877F2",
+        "brandColorDark": "#1877F2",
+        "composerIcon": "./assets/icon-192.png",
+        "composerIconDark": "./assets/icon-192.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/socialit-get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Identify the connected workspace",
+              "prompt": "Which Socialit workspace am I connected to?",
+              "tools_triggered": "get-current-workspace",
+              "expected_behavior": "Returns the workspace name and ID, the user's role and the granted permissions without changing anything."
+            },
+            {
+              "description": "Check connected account health",
+              "prompt": "List my connected social accounts and tell me which ones need to be reconnected.",
+              "tools_triggered": "list-accounts, get-accounts-health",
+              "expected_behavior": "Lists the connected accounts with their network and profile, and names any account whose token expired or lost permissions."
+            },
+            {
+              "description": "Draft a post without publishing",
+              "prompt": "Draft a LinkedIn post announcing our webinar next Thursday, but don't schedule it.",
+              "tools_triggered": "list-accounts, create-post",
+              "expected_behavior": "Creates a draft post for the connected LinkedIn account, returns its ID, and confirms it was neither scheduled nor published."
+            },
+            {
+              "description": "Review unread inbox conversations",
+              "prompt": "Show my unread direct messages and summarize what people are asking.",
+              "tools_triggered": "list-conversations, list-messages",
+              "expected_behavior": "Lists unread conversations newest first with the network and sender, and summarizes the latest messages without replying."
+            },
+            {
+              "description": "Find top posts by engagement",
+              "prompt": "Which of my posts from the last 30 days got the most engagement?",
+              "tools_triggered": "list-post-analytics",
+              "expected_behavior": "Returns the top published posts of the last 30 days ranked by engagement, with network, publish date and the main metrics."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated creative writing request",
+              "prompt": "Write me a short poem about autumn leaves."
+            },
+            {
+              "description": "Personal email is out of scope",
+              "prompt": "Read my Gmail inbox and summarize today's messages."
+            },
+            {
+              "description": "Buying fake engagement violates the acceptable use policy",
+              "prompt": "Buy 10,000 followers for my Instagram account and like all my old posts from fake accounts."
+            }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "First release: hosted Socialit MCP server with OAuth, more than 670 tools, and skills for setup, publishing, the inbox, analytics, automations, webhooks, and the API."
+      }
+    }
+  }
+}
